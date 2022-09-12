@@ -1,9 +1,17 @@
 import type { NextPage } from "next";
+import Head from "next/head";
+import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-black h-screen overflow-hidden">
-      <h1 className="text-white">Ciao</h1>
+    <div className="">
+      <Head>
+        <title>Airbnb</title>
+      </Head>
+      <>
+        <Header />
+      </>
+      {/* Banner */}
     </div>
   );
 };
