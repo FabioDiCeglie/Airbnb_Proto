@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { SearchIcon } from "@heroicons/react/solid";
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md py-5 px-5">
+    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md py-5 px-5 md:px-10">
       <div className="relative flex items-center h-10 cursor-pointer">
         <Image
           src="https://links.papareact.com/qd3"
@@ -12,7 +13,10 @@ function Header() {
           objectPosition="left"
         />
       </div>
-      <div></div>
+      <div>
+        <input type="text" placeholder="Start your search" />
+        <SearchIcon className="h-8" />
+      </div>
       <div></div>
     </header>
   );
