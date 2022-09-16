@@ -1,9 +1,14 @@
-import React from "react";
+import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div>
-      <h1>Banner</h1>
+    <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[700px] 2xl:h-[700px]">
+      <Image
+        src="https://links.papareact.com/0fm"
+        alt="Airbnb banner"
+        layout="fill"
+        objectFit="cover"
+      />
     </div>
   );
 };
