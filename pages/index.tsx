@@ -19,14 +19,16 @@ const Home: NextPage = () => {
         <section className="pt-6">
           <h2 className="text-3xl font-semibold pb-5">Explore Nearby</h2>
 
-          {dataBanner.map(({ img, distance, location }, i) => (
-            <SmallCard
-              key={i}
-              img={img}
-              distance={distance}
-              location={location}
-            />
-          ))}
+          <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {dataBanner.map(({ img, distance, location }, i) => (
+              <SmallCard
+                key={i}
+                img={img}
+                distance={distance}
+                location={location}
+              />
+            ))}
+          </div>
         </section>
       </main>
     </div>
