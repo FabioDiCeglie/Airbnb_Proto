@@ -34,7 +34,8 @@ const Home: NextPage = () => {
 
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
-          <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+          <div className="flex space-x-3 overflow-scroll ">
             {secondDataBanner.map(({ img, title }, i) => (
               <MediumCard key={i} img={img} title={title} />
             ))}
