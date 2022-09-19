@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import SmallCard from "../components/SmallCard";
 import { dataBanner } from "../data";
 
 const Home: NextPage = () => {
@@ -18,8 +19,13 @@ const Home: NextPage = () => {
         <section className="pt-6">
           <h2 className="text-3xl font-semibold pb-5">Explore Nearby</h2>
 
-          {dataBanner.map((item) => (
-            <h1>{item.location}</h1>
+          {dataBanner.map(({ img, distance, location }, i) => (
+            <SmallCard
+              key={i}
+              img={img}
+              distance={distance}
+              location={location}
+            />
           ))}
         </section>
       </main>
