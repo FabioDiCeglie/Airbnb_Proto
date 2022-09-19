@@ -40,3 +40,22 @@ export const dataBanner = [
     distance: "8-hour drive",
   },
 ];
+
+export const secondDataBanner = [
+  {
+    img: "https://media.cntraveler.com/photos/58e4005abdecd628dc467e91/master/pass/Exterior-TaylorRiverLodge-Colorado-CRHotel.jpg",
+    title: "Outdoor getaways",
+  },
+  {
+    img: "https://d3aux7tjp119y2.cloudfront.net/original_images/72hCabin20197-20Photo20Cred20Copenhagen20Wilderness2028129-CMSTemplate.jpg",
+    title: "Unique stays",
+  },
+  {
+    img: "http://www.luxxu.net/blog/wp-content/uploads/2017/08/Luxury-Homes-That-Give-Modern-Living-A-Whole-New-Meaning-Heber-Utah.jpg",
+    title: "Entire homes",
+  },
+  {
+    img: "https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1617452472684-RKCXX7U5M799ZRJXVH1Z/airbnb-how-to-find-dog-friendly-airbnb.jpg",
+    title: "Pet allowed",
+  },
+];
