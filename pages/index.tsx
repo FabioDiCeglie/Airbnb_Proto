@@ -30,6 +30,10 @@ const Home: NextPage = () => {
             ))}
           </div>
         </section>
+
+        <section>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+        </section>
       </main>
     </div>
   );
