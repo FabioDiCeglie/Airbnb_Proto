@@ -43,7 +43,12 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <LargeCard />
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          description="Wishlists curated by Airbnb"
+          buttonText="Get Inspired"
+        />
       </main>
     </div>
   );
