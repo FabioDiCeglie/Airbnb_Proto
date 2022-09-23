@@ -9,21 +9,22 @@ import { useState } from "react";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
+import { Ranges } from "./types";
 
 function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
+  const handleSelect = (ranges: Ranges) => {
+    setStartDate(ranges.Selection.startDate);
+    setEndDate(ranges.Selection.endDate);
+  };
+
   const selectionRange = {
     startDate,
     endDate,
     key: "Selection",
-  };
-
-  const handleSelect = () => {
-    setStartDate();
-    setEndDate();
   };
 
   return (
