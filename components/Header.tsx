@@ -4,6 +4,7 @@ import {
   GlobeAltIcon,
   MenuIcon,
   UserCircleIcon,
+  UsersIcon,
 } from "@heroicons/react/solid";
 import { useState } from "react";
 import "react-date-range/dist/styles.css";
@@ -15,7 +16,8 @@ function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
+  console.log(numberOfGuests);
   const handleSelect = (ranges: Ranges) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
@@ -69,6 +71,21 @@ function Header() {
             // @ts-ignore
             onChange={handleSelect}
           />
+          <div className="flex items-center border-b mb-4">
+            <h2 className="text-2xl pl-2 flex-grow font-semibold">
+              Number of Guests
+            </h2>
+
+            <UsersIcon className="h-5" />
+            <input
+              value={numberOfGuests}
+              // @ts-ignore
+              onChange={(e) => setNumberOfGuests(e.target.value)}
+              type="number"
+              min={1}
+              className="w-12 pl-2 text-lg outline-none text-red-400"
+            />
+          </div>
         </div>
       )}
     </header>
