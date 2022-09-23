@@ -1,7 +1,7 @@
 import { SetStateAction } from "react";
 
 export interface Ranges {
-  Selection: Selection;
+  selection: Selection;
 }
 interface Selection {
   startDate: SetStateAction<Date>;

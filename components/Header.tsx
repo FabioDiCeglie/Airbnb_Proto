@@ -17,14 +17,14 @@ function Header() {
   const [endDate, setEndDate] = useState(new Date());
 
   const handleSelect = (ranges: Ranges) => {
-    setStartDate(ranges.Selection.startDate);
-    setEndDate(ranges.Selection.endDate);
+    setStartDate(ranges.selection.startDate);
+    setEndDate(ranges.selection.endDate);
   };
 
   const selectionRange = {
     startDate,
     endDate,
-    key: "Selection",
+    key: "selection",
   };
 
   return (
@@ -61,11 +61,12 @@ function Header() {
       </div>
 
       {searchInput && (
-        <div>
+        <div className="flex flex-col col-span-3 mx-auto">
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}
             rangeColors={["#FD5B61"]}
+            // @ts-ignore
             onChange={handleSelect}
           />
         </div>
