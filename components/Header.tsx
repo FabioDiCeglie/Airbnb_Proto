@@ -11,12 +11,14 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import { Ranges } from "./types";
+import { useRouter } from "next/router";
 
 function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfGuests, setNumberOfGuests] = useState(1);
+  const router = useRouter();
 
   const handleSelect = (ranges: Ranges) => {
     setStartDate(ranges.selection.startDate);
@@ -35,7 +37,10 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md py-5 px-5 md:px-10">
-      <div className="relative flex items-center h-10 cursor-pointer">
+      <div
+        onClick={() => router.push("/")}
+        className="relative flex items-center h-10 cursor-pointer"
+      >
         <Image
           src="https://links.papareact.com/qd3"
           alt="Airbnb logo"
@@ -95,7 +100,12 @@ function Header() {
             <button className="flex-grow text-gray-500" onClick={resetInput}>
               Cancel
             </button>
-            <button className="flex-grow text-red-400">Search</button>
+            <button
+              onClick={() => router.push("/search")}
+              className="flex-grow text-red-400"
+            >
+              Search
+            </button>
           </div>
         </div>
       )}
