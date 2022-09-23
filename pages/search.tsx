@@ -2,10 +2,14 @@ import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { format } from "date-fns";
+import { dataSearchPage } from "../data";
+import InfoCard from "../components/InfoCard";
 
 function Search() {
   const router = useRouter();
   const { location, startDate, endDate, numberOfGuests } = router.query;
+
+  if (!startDate || !endDate || !location || !numberOfGuests) return;
 
   const formattedStartDate = format(
     new Date(startDate as string),
@@ -13,6 +17,7 @@ function Search() {
   );
   const formattedEndDate = format(new Date(endDate as string), "dd MMMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
+
   return (
     <div>
       <Header
@@ -35,6 +40,26 @@ function Search() {
             <p className="button">Price</p>
             <p className="button">Rooms and beds</p>
             <p className="button">More filter</p>
+          </div>
+
+          <div className="flex flex-col">
+            {dataSearchPage.map(
+              (
+                { img, location, title, description, star, price, total },
+                i
+              ) => (
+                <InfoCard
+                  key={i}
+                  img={img}
+                  location={location}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                  title={title}
+                />
+              )
+            )}
           </div>
         </section>
       </main>
