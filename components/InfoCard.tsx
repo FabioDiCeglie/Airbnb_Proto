@@ -25,13 +25,7 @@ export default function InfoCard({
 
         <h4 className="text-xl">{title}</h4>
 
-        <div className="border-b w-10 pt-2">
-          <p>{description}</p>
-        </div>
-      </div>
-
-      <div>
-        <h2></h2>
+        <div className="border-b w-10 pt-2" />
       </div>
     </div>
   );
