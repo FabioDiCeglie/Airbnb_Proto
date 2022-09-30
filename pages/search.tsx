@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import { format } from "date-fns";
 import { dataSearchPage } from "../data";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 function Search() {
   const router = useRouter();
@@ -61,6 +62,10 @@ function Search() {
               )
             )}
           </div>
+        </section>
+
+        <section>
+          <Map />
         </section>
       </main>
 
