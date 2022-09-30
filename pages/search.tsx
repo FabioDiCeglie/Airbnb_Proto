@@ -64,6 +64,7 @@ function Search() {
           </div>
         </section>
 
+        {/* <section className="hidden xl:inline-flex"> */}
         <section>
           <Map />
         </section>
