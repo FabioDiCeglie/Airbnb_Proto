@@ -17,4 +17,8 @@ module.exports = {
       "images.squarespace-cdn.com",
     ],
   },
+  env: {
+    mapbox_key:
+      "pk.eyJ1IjoiZmFiaXVjIiwiYSI6ImNsOG9nMnNuejE4OHEzbnNkdHBmd3JyZzMifQ.jYCP8iWUFHRRjMJrLK1i4w",
+  },
 };
