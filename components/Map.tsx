@@ -15,6 +15,7 @@ export default function Map() {
         mapStyle="mapbox://styles/fabiuc/cl8oqkadj000a14t5g1tv8ra5"
         mapboxAccessToken={process.env.mapbox_key}
         {...viewPort}
+        onMove={(viewport: any) => setViewPort(viewport.viewState)}
       ></ReactMapGL>
     </div>
   );
