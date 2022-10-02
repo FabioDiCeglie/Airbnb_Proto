@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ReactMapGL from "react-map-gl";
+import getCenter from "geolib/es/getCenter";
+import { SearchResults } from "./types";
 
-export default function Map() {
+export default function Map({ searchResults }: any) {
   const [viewPort, setViewPort] = useState({
     width: "100%",
     height: "100%",
@@ -9,6 +11,12 @@ export default function Map() {
     longitude: -122.4347,
     zoom: 11,
   });
+
+  const coordinates = searchResults.map((searchResult: SearchResults) => ({
+    latitude: searchResult.lat,
+    longitude: searchResult.long,
+  }));
+
   return (
     <div>
       <ReactMapGL

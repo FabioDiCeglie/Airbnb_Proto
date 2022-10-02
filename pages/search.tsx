@@ -65,7 +65,7 @@ function Search() {
         </section>
 
         <section className="hidden xl:inline-flex xl:min-wid-[600]">
-          <Map />
+          <Map searchResults={dataSearchPage} />
         </section>
       </main>
 
