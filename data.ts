@@ -70,8 +70,8 @@ export const dataSearchPage = [
     star: 4.73,
     price: "£30 / night",
     total: "£117 total",
-    long: -0.0022275,
-    lat: 51.5421655,
+    long: -0.0232275,
+    lat: 51.569865,
   },
   {
     img: "https://links.papareact.com/hz2",
@@ -82,8 +82,8 @@ export const dataSearchPage = [
     star: 4.3,
     price: "£40 / night",
     total: "£157 total",
-    long: -0.095091,
-    lat: 51.48695,
+    long: -0.0242275,
+    lat: 51.509865,
   },
   {
     img: "https://links.papareact.com/uz7",
@@ -95,7 +95,7 @@ export const dataSearchPage = [
     price: "£35 / night",
     total: "£207 total",
     long: -0.135638,
-    lat: 51.521916,
+    lat: 51.509865,
   },
   {
     img: "https://links.papareact.com/6as",
@@ -107,7 +107,7 @@ export const dataSearchPage = [
     price: "£55 / night",
     total: "£320 total",
     long: -0.069961,
-    lat: 51.472618,
+    lat: 51.509865,
   },
   {
     img: "https://links.papareact.com/xhc",
@@ -119,7 +119,7 @@ export const dataSearchPage = [
     price: "£60 / night",
     total: "£450 total",
     long: -0.08472,
-    lat: 51.510794,
+    lat: 51.509865,
   },
   {
     img: "https://links.papareact.com/pro",
@@ -131,7 +131,7 @@ export const dataSearchPage = [
     price: "£65 / night",
     total: "£480 total",
     long: -0.094116,
-    lat: 51.51401,
+    lat: 51.509865,
   },
   {
     img: "https://links.papareact.com/8w2",
@@ -143,6 +143,6 @@ export const dataSearchPage = [
     price: "£90 / night",
     total: "£650 total",
     long: -0.109889,
-    lat: 51.521245,
+    lat: 51.509865,
   },
 ];
