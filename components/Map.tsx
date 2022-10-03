@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import getCenter from "geolib/es/getCenter";
 import { SearchResults } from "./types";
+import Pin from "./Pin";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function Map({ searchResults }: any) {
   const [selectedLocation, setSelectedLocation] = useState({});
@@ -29,15 +31,15 @@ export default function Map({ searchResults }: any) {
       {...viewPort}
       onMove={(viewport: any) => setViewPort(viewport.viewState)}
     >
-      {searchResults.map((result: SearchResults) => (
+      {searchResults.map((result: SearchResults, index: number) => (
         <div key={result.long}>
-          <Marker latitude={result.lat} longitude={result.long}>
-            <p
-              onClick={() => setSelectedLocation(result)}
-              className="cursor-pointer text-2xl animate-bounce"
-            >
-              📍
-            </p>
+          <Marker
+            key={`marker-${index}`}
+            latitude={result.lat}
+            longitude={result.long}
+            anchor="bottom"
+          >
+            <Pin />
           </Marker>
         </div>
       ))}
