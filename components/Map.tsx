@@ -4,18 +4,22 @@ import getCenter from "geolib/es/getCenter";
 import { SearchResults } from "./types";
 
 export default function Map({ searchResults }: any) {
-  const [viewPort, setViewPort] = useState({
-    width: "100%",
-    height: "100%",
-    latitude: 37.7577,
-    longitude: -122.4347,
-    zoom: 11,
-  });
-
   const coordinates = searchResults.map((searchResult: SearchResults) => ({
     latitude: searchResult.lat,
     longitude: searchResult.long,
   }));
+
+  const center = getCenter(coordinates);
+
+  const [viewPort, setViewPort] = useState({
+    width: "100%",
+    height: "100%",
+    // @ts-ignore
+    latitude: center.latitude,
+    // @ts-ignore
+    longitude: center.longitude,
+    zoom: 11,
+  });
 
   return (
     <div>
