@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import getCenter from "geolib/es/getCenter";
 import { SearchResults } from "./types";
-import Pin from "./Pin";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function Map({ searchResults }: any) {
@@ -39,8 +38,28 @@ export default function Map({ searchResults }: any) {
             longitude={result.long}
             anchor="bottom"
           >
-            <Pin />
+            <p
+              onClick={() => setSelectedLocation(result)}
+              className="cursor-pointer text-2xl animate-bounce"
+              aria-label="push-pin"
+            >
+              📍
+            </p>
           </Marker>
+
+          {selectedLocation.long === result.long ? (
+            <Popup
+              onClose={() => setSelectedLocation({})}
+              closeOnClick={false}
+              latitude={result.lat}
+              longitude={result.long}
+              anchor="bottom"
+            >
+              {result.title}
+            </Popup>
+          ) : (
+            false
+          )}
         </div>
       ))}
     </ReactMapGL>
