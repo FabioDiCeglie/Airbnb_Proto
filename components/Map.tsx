@@ -47,7 +47,8 @@ export default function Map({ searchResults }: any) {
             </p>
           </Marker>
 
-          {selectedLocation.long === result.long ? (
+          {// @ts-ignore
+          selectedLocation.long === result.long ? (
             <Popup
               onClose={() => setSelectedLocation({})}
               closeOnClick={false}
