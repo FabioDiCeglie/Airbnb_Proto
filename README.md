@@ -7,7 +7,7 @@ Clone the repo - `yarn run dev`
 ### 🤖 Technologies
 
 - Languages: Typescript/Javascript
-- Frontend Libraries: NextJS - TailwindCSS
+- Frontend Libraries: NextJS - TailwindCSS - Mapbox
 
   Deployed with Vercel
 
