@@ -19,4 +19,4 @@ Clone the repo - `yarn run dev`
 
 ### ℹ️ More info
 
-- [Website](https://airbnb-proto.vercel.app/)
+- [Website](https://prototype-air-bnb.vercel.app/)
