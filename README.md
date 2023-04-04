@@ -1,22 +1,18 @@
-# Airbnb prototype deployed on Vercel
+# Airbnb prototype
 
-### Start
-
-Clone the repo - `yarn run dev`
-
-### 🤖 Technologies
-
-- Languages: Typescript/Javascript
-- Frontend Libraries: NextJS - TailwindCSS - Mapbox
-
-  Deployed with Vercel
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/31222514/149813300-65804694-d3ea-4e31-955d-dbc47229a82d.png" width="8%" alt="Typescript logo">
-    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DWovAEyS--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/lr4rm1p2pcezmxqs5dqk.png" width="23%" alt="Vercel + NextJS">
-    <img src="https://codekitapp.com/images/help/free-tailwind-icon@2x.png" width="8%" alt="Tailwind CSS">
-</p>
-
-### ℹ️ More info
+## Website
 
 - [Website](https://prototype-air-bnb.vercel.app/)
+
+##  Technologies used
+
+- Typescript: TypeScript is a superset of JavaScript that adds static type checking and other features to improve large-scale web development.
+- TailwindCSS: a utility-first CSS framework that provides a set of pre-defined CSS classes that can be used to style web applications.
+- Next.js: a JavaScript framework for building server-rendered React applications.
+- MapBox: Mapbox is a cloud-based mapping and location data platform that provides developers with tools and APIs to create custom maps,
+- Vercel: a cloud platform for static sites and serverless functions.
+
+## Running Locally
+
+1. Install dependencies: `yarn`
+1. Start the dev server: `yarn dev`
